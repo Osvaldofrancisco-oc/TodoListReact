@@ -53,9 +53,91 @@ button.add:hover{
     background:#363f88;
 }
 
+.todolist{
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    width: 600px;
+    margin: auto;
+}
 
+.item{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #363b65;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.item:hover{
+    background:#151627
+}
+
+.item span{
+    width: 100%;
+    color:white;
+    margin-right: 10px;
+    padding: 10px 15px;
+
+}
+.item.Completo{
+    display: flex;
+    justify-content: space-between;
+    background: #1e1f2e;
+    border: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.item.Completo span{
+      width: 100%;
+      color: #4d506e;
+      margin-right: 10px;
+      padding: 10px 15px;
+      text-decoration: line-through;
+}
+
+button.del{
+    background: none;
+    border: none;
+    color: #4d506e;
+    padding: 15px;
+    cursor: pointer;
+    
+}
+
+button.del:hover{
+    background: #ff004c;
+    border: none;
+    color: white;
+    padding: 15px;
+    cursor: pointer;  
+}
+.deletaAll{
+    border: 1px solid #ff004c;
+    background: none;
+    padding: 15px;
+    color: #ff004c;
+    font-weight:bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+button.deletaAll:hover{
+    background: #ff004c;
+    color: white;
+    
+
+}
+.img{
+    max-width: 100%;
+    border-radius: 5px;
+}
 @media screen and (max-width:900){
     form{
+        width: 100%;
+    }
+    .todolist{
         width: 100%;
     }
 }
