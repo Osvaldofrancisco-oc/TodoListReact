@@ -1,11 +1,18 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './TodoList.css'
 import Icon from './assets/img.avif'
 
 function TodoList(){
 
-    const [lista, setLista] = useState([])
+    const listaStorage = localStorage.getItem('lista');
+
+
+    const [lista, setLista] = useState(listaStorage ? JSON.parse(listaStorage) : "" )
     const [novoItem,setNovoItem] = useState("")
+
+    useEffect(()=>{
+        localStorage.setItem('lista', JSON.stringify(lista))
+    },[lista])
 
     function addItem(form){
         form.preventDefault();
